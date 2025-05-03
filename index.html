@@ -8,64 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .hero {
-      padding: 2rem 0 3rem; /* Reduced from 6rem 0 4rem */
-      text-align: center;
-    }
-    
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      background: linear-gradient(to right, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      line-height: 1.2;
-    }
-    
-    .hero p {
-      font-size: 1.25rem;
-      max-width: 700px;
-      margin: 0 auto 2.5rem;
-      color: var(--gray);
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 2rem;
-      background-color: var(--primary);
-      color: white;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: var(--transition);
-      box-shadow: var(--shadow-md);
-      text-decoration: none;
-    }
-    
-    .btn:hover {
-      background-color: var(--dark);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .features {
-      padding: 2rem 0; /* Reduced from 4rem */
-    }
-    
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.25rem;
-      }
-      
-      .hero p {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container">
       <div class="header-content">
@@ -76,22 +21,25 @@
     </div>
   </header>
   
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <h1>Find Your Calm. Fuel Your Focus.</h1>
       <p>Transform every moment into an opportunity to rest deeper, dream bigger, and work smarter.</p>
-      <a href="#features" class="btn">Discover How</a>
+      <a href="#features" class="btn btn-primary">Discover How</a>
     </div>
   </section>
   
+  <!-- Features Section -->
   <section id="features" class="features">
     <div class="container">
       <div class="section-title">
         <h2>Why You'll Love It ✨</h2>
       </div>
       
-      <div class="features-grid">
-        <div class="feature-card">
+      <div class="grid features-grid">
+        <!-- Feature Card 1 -->
+        <div class="card feature-card">
           <div class="card-header">
             <div class="feature-icon">🎧</div>
             <h3>Premium Sound Library</h3>
@@ -99,7 +47,8 @@
           <p>High‑quality white noise & ambient tracks to block distractions and soothe your mind.</p>
         </div>
         
-        <div class="feature-card">
+        <!-- Feature Card 2 -->
+        <div class="card feature-card">
           <div class="card-header">
             <div class="feature-icon">📝</div>
             <h3>Dream Journal</h3>
@@ -107,7 +56,8 @@
           <p>Capture, organize, and revisit your nighttime insights in a private, intuitive space.</p>
         </div>
         
-        <div class="feature-card">
+        <!-- Feature Card 3 -->
+        <div class="card feature-card">
           <div class="card-header">
             <div class="feature-icon">⚙️</div>
             <h3>Fully Customizable</h3>
@@ -115,7 +65,8 @@
           <p>Import your own sounds & backgrounds—craft the perfect atmosphere that's uniquely yours.</p>
         </div>
         
-        <div class="feature-card">
+        <!-- Feature Card 4 -->
+        <div class="card feature-card">
           <div class="card-header">
             <div class="feature-icon">⏱️</div>
             <h3>Productivity Timers</h3>
@@ -123,7 +74,8 @@
           <p>Stay laser‑focused with a versatile countdown timer and built‑in Pomodoro mode.</p>
         </div>
         
-        <div class="feature-card">
+        <!-- Feature Card 5 -->
+        <div class="card feature-card">
           <div class="card-header">
             <div class="feature-icon">🎚️</div>
             <h3>Advanced Sound Mixer</h3>
@@ -134,6 +86,7 @@
     </div>
   </section>
   
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-main">
