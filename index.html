@@ -2,24 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Restful Sounds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restful Sounds | Find Your Calm. Fuel Your Focus.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero {
+      padding: 2rem 0 3rem; /* Reduced from 6rem 0 4rem */
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      color: var(--gray);
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background-color: var(--dark);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .features {
+      padding: 2rem 0; /* Reduced from 4rem */
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>🎵 Restful Sounds</h1>
-  <p><strong>by Donkey Code Syndicate LLC</strong></p>
-  <p><em>Find Your Calm. Fuel Your Focus.</em></p>
-  <h2>Why You’ll Love It</h2>
-  <ul>
-    <li>🎧 <strong>Premium Sound Library</strong></li>
-    <li>📝 <strong>Dream Journal</strong></li>
-    <li>⚙️ <strong>Fully Customizable</strong></li>
-    <li>⏱️ <strong>Productivity Timers</strong></li>
-    <li>🎚️ <strong>Advanced Sound Mixer</strong></li>
-  </ul>
-  <h2>Quick Links</h2>
-  <ul>
-    <li><a href="privacy-policy.html">🔒 Privacy Policy</a></li>
-    <li><a href="terms-of-service.html">📄 Terms of Service</a></li>
-  </ul>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          🎵 <span>Restful Sounds</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <h1>Find Your Calm. Fuel Your Focus.</h1>
+      <p>Transform every moment into an opportunity to rest deeper, dream bigger, and work smarter.</p>
+      <a href="#features" class="btn">Discover How</a>
+    </div>
+  </section>
+  
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why You'll Love It ✨</h2>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="card-header">
+            <div class="feature-icon">🎧</div>
+            <h3>Premium Sound Library</h3>
+          </div>
+          <p>High‑quality white noise & ambient tracks to block distractions and soothe your mind.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-header">
+            <div class="feature-icon">📝</div>
+            <h3>Dream Journal</h3>
+          </div>
+          <p>Capture, organize, and revisit your nighttime insights in a private, intuitive space.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-header">
+            <div class="feature-icon">⚙️</div>
+            <h3>Fully Customizable</h3>
+          </div>
+          <p>Import your own sounds & backgrounds—craft the perfect atmosphere that's uniquely yours.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-header">
+            <div class="feature-icon">⏱️</div>
+            <h3>Productivity Timers</h3>
+          </div>
+          <p>Stay laser‑focused with a versatile countdown timer and built‑in Pomodoro mode.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-header">
+            <div class="feature-icon">🎚️</div>
+            <h3>Advanced Sound Mixer</h3>
+          </div>
+          <p>Blend multiple tracks with precision controls for rich, layered audio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            🎵 <span>Restful Sounds</span>
+          </div>
+          <p>By Donkey Code Syndicate LLC</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="privacy-policy.html" class="footer-link">🔒 Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer-link">📄 Terms of Service</a>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 Donkey Code Syndicate LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
