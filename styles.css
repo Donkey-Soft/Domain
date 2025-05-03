@@ -309,6 +309,30 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Music note icon styling */
+.music-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--theme-primary);
+  margin-right: var(--space-2);
+}
+
+.music-icon .music-path,
+.music-icon .music-circle {
+  stroke: currentColor;
+}
+
+/* In dark mode, adjust icon brightness */
+@media (prefers-color-scheme: dark) {
+  .music-icon {
+    color: var(--color-primary-300);
+  }
+  
+  .footer .music-icon {
+    color: var(--color-light);
+  }
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -496,6 +520,11 @@ footer {
 .footer-branding .emoji {
   font-size: 1.4rem;
   margin-right: var(--space-1);
+}
+
+.footer-branding .music-icon {
+  color: var(--color-light);
+  margin-right: var(--space-2);
 }
 
 .footer-company {
