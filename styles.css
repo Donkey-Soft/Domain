@@ -189,53 +189,63 @@ header {
   color: var(--dark);
 }
 
+/* Redesigned footer based on the screenshot */
 footer {
-  background-color: var(--dark);
+  background-color: #1a1735;  /* Darker blue/purple from the image */
   color: var(--light);
-  padding: 2rem 0 1rem; /* Reduced from 3rem 0 1.5rem */
-  margin-top: 2rem; /* Reduced from 4rem */
+  padding: 2rem 0 1rem;
+  margin-top: 2rem;
 }
 
-.footer-content {
+.footer-main {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem; /* Reduced from 2rem */
+  column-gap: 2rem;
+  row-gap: 1.5rem;
 }
 
-.footer-left {
-  max-width: 350px;
-}
-
-.footer-logo {
+.footer-branding {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--light);
-  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-branding .emoji {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+
+.footer-company {
+  font-size: 0.9rem;
+  color: #aba9bc;
+  margin-top: 0.5rem;
+}
+
+.footer-updated {
+  color: #aba9bc;
+  font-size: 0.9rem;
 }
 
 .footer-links {
   display: flex;
   gap: 1.5rem;
-  align-items: center;
-}
-
-.footer-date {
-  color: var(--light);
-  opacity: 0.9;
-  font-size: 0.9rem;
-  margin-left: 1rem;
 }
 
 .footer-link {
-  color: var(--light);
+  color: white;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   transition: var(--transition);
-  text-decoration: none;
+}
+
+.footer-link .icon {
+  font-size: 1.1rem;
 }
 
 .footer-link:hover {
@@ -245,9 +255,20 @@ footer {
 .copyright {
   text-align: center;
   font-size: 0.875rem;
-  color: var(--gray);
+  color: #8e8ca0;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-links {
+    margin-top: 1.5rem;
+  }
 }
 
 /* Additional styles for policy pages */
@@ -508,5 +529,14 @@ footer {
   .footer-date {
     margin-left: 0;
     margin-top: 0.5rem;
+  }
+  
+  .footer-company {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-date {
+    text-align: left;
   }
 }
