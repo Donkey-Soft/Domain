@@ -205,6 +205,7 @@ body {
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s ease;
 }
 
 img, svg, video, canvas, audio, iframe, embed, object {
@@ -305,6 +306,7 @@ header {
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
   box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .header-content {
@@ -334,6 +336,7 @@ header {
   transition: var(--transition-all);
   position: relative;
   overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .card::before {
@@ -417,6 +420,7 @@ header {
   border: none;
   text-decoration: none;
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-primary {
@@ -448,6 +452,7 @@ header {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   align-self: flex-start;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .back-link:before {
@@ -468,6 +473,7 @@ footer {
   color: var(--color-light);
   padding: var(--space-5) 0 var(--space-3);
   margin-top: var(--space-5);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer-main {
@@ -818,17 +824,54 @@ footer {
   }
 }
 
-/* Dark mode preparation - not active by default */
+/* Dark mode implementation */
 @media (prefers-color-scheme: dark) {
-  :root.theme-auto {
+  :root {
+    /* Theme colors for dark mode */
     --theme-primary: var(--color-primary-400);
+    --theme-secondary: var(--color-accent-400);
     --theme-text: var(--color-gray-100);
-    --theme-card: var(--color-gray-900);
-    --theme-footer: var(--color-gray-900);
-    --theme-background: #121212;
+    --theme-card: #1f1f35;
+    --theme-footer: #0f0f1f;
+    --theme-background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     
-    --shadow-color: 0deg 0% 0%;
-    --shadow-strength: 0.2;
+    /* Adjust shadows for dark mode */
+    --shadow-color: 246deg 40% 10%;
+    
+    /* Card shadow adjustment */
+    --shadow-sm: 
+      0 1px 2px hsl(var(--shadow-color) / 0.2),
+      0 1px 1px hsl(var(--shadow-color) / 0.25);
+      
+    --shadow-md: 
+      0 4px 6px -1px hsl(var(--shadow-color) / 0.3),
+      0 2px 4px -2px hsl(var(--shadow-color) / 0.3);
+      
+    --shadow-lg: 
+      0 10px 15px -3px hsl(var(--shadow-color) / 0.3),
+      0 4px 6px -4px hsl(var(--shadow-color) / 0.3);
+      
+    /* Text color adjustments */  
+    --color-gray: #a9adc1;
+    --color-gray-light: #8e92ad;
+    --color-gray-dark: #63658f;
+  }
+  
+  /* Specific component overrides for dark mode */
+  .card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .back-link {
+    background: var(--theme-card);
+  }
+  
+  .card-title {
+    color: var(--color-light);
+  }
+  
+  header {
+    background: rgba(26, 26, 46, 0.8);
   }
 }
 
