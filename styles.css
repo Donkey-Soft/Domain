@@ -574,7 +574,7 @@ footer {
 
 /* 5.1 Homepage */
 .hero {
-  padding: var(--space-5) 0 var(--space-7);
+  padding: var(--space-5) 0 var(--space-4);
   text-align: center;
 }
 
@@ -597,7 +597,7 @@ footer {
 }
 
 .features {
-  padding: var(--space-5) 0;
+  padding: var(--space-3) 0;
 }
 
 .section-title {
