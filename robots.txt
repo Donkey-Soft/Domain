@@ -1,0 +1,42 @@
+# robots.txt — donkeycodesyndicate.com
+# Donkey Code Syndicate LLC | Arizona, USA
+# All crawlers welcome — human or machine.
+
+User-agent: *
+Allow: /
+
+# AI training & retrieval crawlers — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+Sitemap: https://donkeycodesyndicate.com/sitemap.xml

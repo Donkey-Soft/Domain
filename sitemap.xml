@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage / Company -->
+  <url>
+    <loc>https://donkeycodesyndicate.com/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Restful Sounds App Page -->
+  <url>
+    <loc>https://donkeycodesyndicate.com/restfulsounds.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Privacy Policy — Website -->
+  <url>
+    <loc>https://donkeycodesyndicate.com/privacy-policy.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Privacy Policy — Restful Sounds App -->
+  <url>
+    <loc>https://donkeycodesyndicate.com/privacy-policy-restful-sounds.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Terms of Service — Restful Sounds -->
+  <url>
+    <loc>https://donkeycodesyndicate.com/terms-of-service.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

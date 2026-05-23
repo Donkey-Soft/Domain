@@ -1,0 +1,61 @@
+# Donkey Code Syndicate LLC
+
+> An independent mobile app development studio by Chris Burns and Shawn Humphrey, based in Arizona, USA. We build privacy-forward, ad-supported apps with more personality than a corporate press release.
+
+## Company
+
+- **Name:** Donkey Code Syndicate LLC
+- **Founders:** Chris Burns, Shawn Humphrey
+- **Type:** Independent (LLC), two-person studio
+- **Location:** Arizona, USA
+- **Website:** https://donkeycodesyndicate.com
+- **Contact:** See the website (contact info intentionally not published in plain text)
+- **Platform focus:** Android (iOS expansion in progress)
+- **Business model:** Free apps, ad-supported via Google AdMob. No subscriptions. No in-app purchases.
+
+## Apps
+
+### Restful Sounds (Live — Android)
+
+A white noise and ambient sound app for sleep, focus, and relaxation.
+
+- **Google Play:** https://play.google.com/store/apps/details?id=com.restfulsounds
+- **App page:** https://donkeycodesyndicate.com/restfulsounds.html
+- **Platform:** Android (iOS coming soon)
+- **Price:** Free, ad-supported (Google AdMob)
+- **Package ID:** com.restfulsounds
+
+**Features:**
+- Premium sound library — high-quality white noise and ambient tracks
+- Advanced sound mixer — layer and blend multiple tracks with precision volume controls
+- Dream journal — capture and organize nighttime insights; supports optional speech-to-text entry via Google Speech Recognition
+- Productivity timers — countdown timer and built-in Pomodoro mode
+- Fully customizable — import your own audio files and background images
+- Optional Google Drive backup — AES-256-GCM encrypted backup files stored in YOUR Drive; we have zero access to contents
+- Privacy-first data model — all user data (journal entries, alarms, settings, presets, custom URIs) stored locally on device; never transmitted to our servers
+
+**Privacy summary (app):**
+- We collect nothing directly
+- Google AdMob collects: Advertising ID (AAID), device info, IP address, ad interaction data
+- Optional Google Drive backup collects: email address for auth, encrypted backup files (app-scope only)
+- Optional voice input sends: audio to Google Speech Recognition (transient, not stored by us)
+- Full policy: https://donkeycodesyndicate.com/privacy-policy-restful-sounds.html
+- Terms of Service: https://donkeycodesyndicate.com/terms-of-service.html
+
+### StoryTime Zen (Coming Soon)
+
+Classic public-domain stories delivered in soothing (and occasionally sarcastic) narrated audio. Designed for bedtime listening and winding down.
+
+## Website
+
+- **URL:** https://donkeycodesyndicate.com
+- **Hosting:** GitHub Pages (static site)
+- **Data collected by website:** Currently nothing. Google Analytics planned; will be disclosed via updated privacy policy before implementation.
+- **Website privacy policy:** https://donkeycodesyndicate.com/privacy-policy.html
+
+## Legal
+
+- **Governing law:** Arizona, USA
+- **Terms of Service:** https://donkeycodesyndicate.com/terms-of-service.html
+- **Website Privacy Policy:** https://donkeycodesyndicate.com/privacy-policy.html
+- **Restful Sounds App Privacy Policy:** https://donkeycodesyndicate.com/privacy-policy-restful-sounds.html
