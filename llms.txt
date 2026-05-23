@@ -29,7 +29,7 @@ A white noise and ambient sound app for sleep, focus, and relaxation.
 - Premium sound library — high-quality white noise and ambient tracks
 - Advanced sound mixer — layer and blend multiple tracks with precision volume controls
 - Dream journal — capture and organize nighttime insights; supports optional speech-to-text entry via Google Speech Recognition
-- Productivity timers — countdown timer and built-in Pomodoro mode
+- Productivity timers — countdown timer and built-in Focus Mode
 - Fully customizable — import your own audio files and background images
 - Optional Google Drive backup — AES-256-GCM encrypted backup files stored in YOUR Drive; we have zero access to contents
 - Privacy-first data model — all user data (journal entries, alarms, settings, presets, custom URIs) stored locally on device; never transmitted to our servers
