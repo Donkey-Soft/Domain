@@ -4,9 +4,17 @@
   <!-- Homepage / Company -->
   <url>
     <loc>https://donkeycodesyndicate.com/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- NudgeText Product Page -->
+  <url>
+    <loc>https://donkeycodesyndicate.com/nudgetext.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- Restful Sounds App Page -->

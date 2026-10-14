@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>NudgeText | Local-first Windows text expansion</title>
+  <link rel="icon" type="image/png" href="nudgetext-icon-256.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SEO & Discovery -->
+  <meta name="description" content="NudgeText is a local-first Windows text expander. Its planned public source release will use the MPL-2.0 license; source and downloads are not available yet.">
+  <meta name="author" content="Chris Burns, Shawn Humphrey">
+  <link rel="canonical" href="https://donkeycodesyndicate.com/nudgetext.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://donkeycodesyndicate.com/nudgetext.html">
+  <meta property="og:title" content="NudgeText | Local-first Windows text expansion">
+  <meta property="og:description" content="A local-first Windows text expander from Donkey Code Syndicate LLC. Public source and downloads are not available yet.">
+  <meta property="og:site_name" content="Donkey Code Syndicate LLC">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NudgeText | Local-first Windows text expansion">
+  <meta name="twitter:description" content="A local-first Windows text expander from Donkey Code Syndicate LLC. Public source and downloads are not available yet.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NudgeText",
+    "description": "A local-first Windows text expansion utility that expands configured triggers while typing.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "url": "https://donkeycodesyndicate.com/nudgetext.html",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://donkeycodesyndicate.com/#organization",
+      "name": "Donkey Code Syndicate LLC",
+      "url": "https://donkeycodesyndicate.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="nudgetext.html" class="logo">
+          <img class="nudgetext-logo-icon" src="nudgetext-icon-256.png" alt="">
+          <span>NudgeText</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero nudgetext-hero">
+      <div class="container">
+        <p class="nudgetext-eyebrow">Windows desktop utility</p>
+        <div class="nudgetext-title">
+          <img class="nudgetext-hero-icon" src="nudgetext-icon-256.png" alt="">
+          <h1>NudgeText</h1>
+        </div>
+        <p>Create short triggers for words or text you type often. NudgeText expands them across many Windows desktop apps, with matching and settings kept on your device.</p>
+        <div class="nudgetext-facts" role="group" aria-label="NudgeText platform and release details">
+          <span>Windows 10 and 11</span>
+          <span>Portable, per-user app</span>
+          <span>Free for personal and commercial use after release</span>
+          <span>x64 validated</span>
+          <span>ARM64 not runtime-validated</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" aria-label="NudgeText features">
+      <div class="container">
+        <div class="grid features-grid">
+          <article class="card feature-card">
+            <div class="card-header">
+              <div class="feature-icon nudgetext-mark" aria-hidden="true">NT</div>
+              <h2>Local data</h2>
+            </div>
+            <p>NudgeText has no network client or telemetry. For matching, it keeps a short in-memory suffix bounded by configured triggers. While the app runs, configured shortcuts and expansion text are also held in process memory. Settings and backups use Windows DPAPI for the current user. Exports are readable JSON files.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-header">
+              <div class="feature-icon" aria-hidden="true">Aa</div>
+              <h2>Trigger choices</h2>
+            </div>
+            <p>Immediate mode expands on the final trigger character. Boundary mode waits for Space, Enter, or Tab. Each trigger can keep the typed sequence, replace it with the expansion, or remove it without inserting text.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-header">
+              <div class="feature-icon" aria-hidden="true">⌨</div>
+              <h2>Made for Windows</h2>
+            </div>
+            <p>The portable app needs no installer or admin rights for ordinary use. It starts with its settings window and stays available from the notification area when minimized or closed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Protection -->
+    <section class="container nudgetext-details" aria-labelledby="nudgetext-data-heading">
+      <h2 id="nudgetext-data-heading">How settings are protected</h2>
+      <p>NudgeText encrypts its settings file and automatic backup on disk with the Windows Data Protection API (DPAPI) in CurrentUser mode. The files live under <code>%LOCALAPPDATA%\NudgeText\</code>, and their protection is tied to the current Windows user profile. They are not portable to another account.</p>
+      <p>Encryption protects saved files, not data while NudgeText is running. Configured shortcuts and expansion text remain in process memory, and DPAPI does not protect against the signed-in user, malware running as that user, or memory inspection. Profile loss or account changes can make settings unrecoverable. Exports are readable JSON and should be protected separately.</p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="container nudgetext-details" aria-labelledby="nudgetext-how-heading">
+      <h2 id="nudgetext-how-heading">How text expansion works</h2>
+      <p>NudgeText uses a Windows low-level keyboard hook to match configured triggers, then inserts the expansion with Windows Unicode input events. The matching buffer is limited to the length needed for configured triggers. Startup is off by default and can be enabled from settings.</p>
+      <p>Input behavior depends on the target app and Windows security context. NudgeText may not work in secure desktops, protected fields, some remote sessions, elevated windows when NudgeText runs unelevated, or apps that reject simulated input.</p>
+    </section>
+
+    <!-- Workplace Deployment -->
+    <section class="container nudgetext-details" aria-labelledby="nudgetext-deployment-heading">
+      <h2 id="nudgetext-deployment-heading">For managed Windows environments</h2>
+      <p>IT teams can package the prepared app folder as a Win32 <code>.intunewin</code> package and deploy it through Microsoft Intune to users. NudgeText installs per user; it does not include machine-wide installation or managed policy controls. Organizations should review their application-control policies before rollout.</p>
+    </section>
+
+    <!-- Public Release Status -->
+    <section class="container nudgetext-release" aria-labelledby="nudgetext-release-heading">
+      <h2 id="nudgetext-release-heading">Public source release in preparation</h2>
+      <p>When released, NudgeText will be free to download for personal and commercial use. Its planned source release is under the Mozilla Public License 2.0, which permits commercial use subject to the license terms. The repository is private today, and there is no public download yet; links will be added here after publication.</p>
+      <dl>
+        <dt>Planned source license</dt>
+        <dd><a href="https://mozilla.org/MPL/2.0/" target="_blank" rel="noopener noreferrer">MPL-2.0</a></dd>
+        <dt>Public source repository</dt>
+        <dd>TBD - not published yet</dd>
+        <dt>Downloads</dt>
+        <dd>TBD - no public release yet</dd>
+      </dl>
+    </section>
+
+    <p class="nudgetext-warning">NudgeText is not a password manager. Do not save passwords, recovery codes, API keys, or other secrets as triggers, and never use NudgeText for password submission. Protect exported JSON files because they contain readable text.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <div class="footer-branding">
+            <img class="nudgetext-logo-icon" src="nudgetext-icon-256.png" alt="">
+            NudgeText
+          </div>
+          <div class="footer-company">By <a href="index.html" style="color: var(--color-gray-light); text-decoration: underline;">Donkey Code Syndicate LLC</a></div>
+          <div class="footer-updated">Last updated: October 14, 2026</div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">
+            <span class="icon">🏠</span> Home
+          </a>
+          <a href="restfulsounds.html" class="footer-link">
+            <span class="icon">🎵</span> Restful Sounds
+          </a>
+          <a href="privacy-policy.html" class="footer-link">
+            <span class="icon">🔒</span> Privacy Policy
+          </a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Donkey Code Syndicate LLC. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

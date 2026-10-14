@@ -17,6 +17,7 @@
   5. PAGE-SPECIFIC STYLES
     5.1 Homepage
     5.2 Policy Pages
+    5.3 NudgeText Page
   6. UTILITIES
   7. PRINT STYLES
   8. MEDIA QUERIES
@@ -670,6 +671,139 @@ footer {
   line-height: var(--line-relaxed);
 }
 
+/* 5.3 NudgeText Page */
+.nudgetext-logo-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--space-2);
+  object-fit: contain;
+}
+
+.nudgetext-mark {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-100);
+  color: var(--color-primary-800);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+}
+
+.nudgetext-card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+.nudgetext-hero {
+  padding-top: var(--space-7);
+}
+
+.nudgetext-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.nudgetext-title h1 {
+  margin-bottom: 0;
+}
+
+.nudgetext-hero-icon {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.nudgetext-eyebrow {
+  color: var(--theme-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.nudgetext-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.nudgetext-facts span {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  border-radius: var(--radius-full);
+  background: var(--theme-card);
+  color: var(--theme-text);
+  font-size: var(--text-sm);
+}
+
+.nudgetext-details {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-5);
+}
+
+.nudgetext-details h2 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-lg);
+}
+
+.nudgetext-details p + p {
+  margin-top: var(--space-3);
+}
+
+.nudgetext-release {
+  max-width: 900px;
+  margin: var(--space-5) auto 0;
+  padding: var(--space-5);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  border-radius: var(--radius-lg);
+  background: var(--theme-card);
+  box-shadow: var(--shadow-md);
+}
+
+.nudgetext-release h2 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-lg);
+}
+
+.nudgetext-release a {
+  color: var(--theme-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.nudgetext-release dl {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) 2fr;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.nudgetext-release dt {
+  font-weight: var(--font-semibold);
+}
+
+.nudgetext-release dd {
+  color: var(--color-gray);
+}
+
+.nudgetext-warning {
+  max-width: 900px;
+  margin: var(--space-4) auto 0;
+  padding: 0 var(--space-4);
+  color: var(--theme-text);
+  font-size: var(--text-sm);
+}
+
 .card-title {
   font-size: var(--text-md);
   font-weight: var(--font-semibold);
@@ -851,6 +985,15 @@ footer {
     align-items: flex-start;
     gap: var(--space-3);
   }
+
+  .nudgetext-release dl {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .nudgetext-release dd + dt {
+    margin-top: var(--space-2);
+  }
 }
 
 /* Dark mode implementation */
@@ -897,6 +1040,11 @@ footer {
   
   .card-title {
     color: var(--color-light);
+  }
+
+  .nudgetext-mark {
+    background: rgba(168, 85, 247, 0.2);
+    color: var(--color-primary-200);
   }
   
   header {
