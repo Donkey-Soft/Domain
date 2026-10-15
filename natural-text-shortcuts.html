@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Natural Text Shortcuts | Local-first Windows text expansion</title>
+  <link rel="icon" type="image/png" href="naturaltextshortcuts-icon-256.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SEO & Discovery -->
+  <meta name="description" content="Natural Text Shortcuts is a local-first Windows text expander. Its planned public source release will use the MPL-2.0 license; source and downloads are not available yet.">
+  <meta name="author" content="Chris Burns, Shawn Humphrey">
+  <link rel="canonical" href="https://donkeycodesyndicate.com/natural-text-shortcuts.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://donkeycodesyndicate.com/natural-text-shortcuts.html">
+  <meta property="og:title" content="Natural Text Shortcuts | Local-first Windows text expansion">
+  <meta property="og:description" content="A local-first Windows text expander from Donkey Code Syndicate LLC. Public source and downloads are not available yet.">
+  <meta property="og:site_name" content="Donkey Code Syndicate LLC">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Natural Text Shortcuts | Local-first Windows text expansion">
+  <meta name="twitter:description" content="A local-first Windows text expander from Donkey Code Syndicate LLC. Public source and downloads are not available yet.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Natural Text Shortcuts",
+    "description": "A local-first Windows text expansion utility that expands configured triggers while typing.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "url": "https://donkeycodesyndicate.com/natural-text-shortcuts.html",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://donkeycodesyndicate.com/#organization",
+      "name": "Donkey Code Syndicate LLC",
+      "url": "https://donkeycodesyndicate.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="natural-text-shortcuts.html" class="logo">
+          <img class="natural-text-shortcuts-logo-icon" src="naturaltextshortcuts-icon-256.png" alt="">
+          <span>Natural Text Shortcuts</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero natural-text-shortcuts-hero">
+      <div class="container">
+        <p class="natural-text-shortcuts-eyebrow">Windows desktop utility</p>
+        <div class="natural-text-shortcuts-title">
+          <img class="natural-text-shortcuts-hero-icon" src="naturaltextshortcuts-icon-256.png" alt="">
+          <h1>Natural Text Shortcuts</h1>
+        </div>
+        <p>Create short triggers for words or text you type often. Natural Text Shortcuts expands them across many Windows desktop apps, with matching and settings kept on your device.</p>
+        <div class="natural-text-shortcuts-facts" role="group" aria-label="Natural Text Shortcuts platform and release details">
+          <span>Windows 10 and 11</span>
+          <span>Portable, per-user app</span>
+          <span>Free for personal and commercial use after release</span>
+          <span>x64 validated</span>
+          <span>ARM64 not runtime-validated</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" aria-label="Natural Text Shortcuts features">
+      <div class="container">
+        <div class="grid features-grid">
+          <article class="card feature-card">
+            <div class="card-header">
+              <img class="feature-icon natural-text-shortcuts-card-icon" src="naturaltextshortcuts-icon-256.png" alt="">
+              <h2>Local data</h2>
+            </div>
+            <p>Natural Text Shortcuts has no network client or telemetry. For matching, it keeps a short in-memory suffix bounded by configured triggers. While the app runs, configured shortcuts and expansion text are also held in process memory. Settings and backups use Windows DPAPI for the current user. Exports are readable JSON files.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-header">
+              <div class="feature-icon" aria-hidden="true">Aa</div>
+              <h2>Trigger choices</h2>
+            </div>
+            <p>Immediate mode expands on the final trigger character. Boundary mode waits for Space, Enter, or Tab. Each trigger can keep the typed sequence, replace it with the expansion, or remove it without inserting text.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-header">
+              <div class="feature-icon" aria-hidden="true">⌨</div>
+              <h2>Made for Windows</h2>
+            </div>
+            <p>The portable app needs no installer or admin rights for ordinary use. It starts with its settings window and stays available from the notification area when minimized or closed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Protection -->
+    <section class="container natural-text-shortcuts-details" aria-labelledby="natural-text-shortcuts-data-heading">
+      <h2 id="natural-text-shortcuts-data-heading">How settings are protected</h2>
+      <p>Natural Text Shortcuts encrypts its settings file and automatic backup on disk with the Windows Data Protection API (DPAPI) in CurrentUser mode. The files live under <code>%LOCALAPPDATA%\NaturalTextShortcuts\</code>, and their protection is tied to the current Windows user profile. They are not portable to another account.</p>
+      <p>Encryption protects saved files, not data while Natural Text Shortcuts is running. Configured shortcuts and expansion text remain in process memory, and DPAPI does not protect against the signed-in user, malware running as that user, or memory inspection. Profile loss or account changes can make settings unrecoverable. Exports are readable JSON and should be protected separately.</p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="container natural-text-shortcuts-details" aria-labelledby="natural-text-shortcuts-how-heading">
+      <h2 id="natural-text-shortcuts-how-heading">How text expansion works</h2>
+      <p>Natural Text Shortcuts uses a Windows low-level keyboard hook to match configured triggers, then inserts the expansion with Windows Unicode input events. The matching buffer is limited to the length needed for configured triggers. Startup is off by default and can be enabled from settings.</p>
+      <p>Input behavior depends on the target app and Windows security context. Natural Text Shortcuts may not work in secure desktops, protected fields, some remote sessions, elevated windows when the app runs unelevated, or apps that reject simulated input.</p>
+    </section>
+
+    <!-- Workplace Deployment -->
+    <section class="container natural-text-shortcuts-details" aria-labelledby="natural-text-shortcuts-deployment-heading">
+      <h2 id="natural-text-shortcuts-deployment-heading">For managed Windows environments</h2>
+      <p>IT teams can package the prepared app folder as a Win32 <code>.intunewin</code> package and deploy it through Microsoft Intune to users. Natural Text Shortcuts installs per user; it does not include machine-wide installation or managed policy controls. Organizations should review their application-control policies before rollout.</p>
+    </section>
+
+    <!-- Public Release Status -->
+    <section class="container natural-text-shortcuts-release" aria-labelledby="natural-text-shortcuts-release-heading">
+      <h2 id="natural-text-shortcuts-release-heading">Public source release in preparation</h2>
+      <p>When released, Natural Text Shortcuts will be free to download for personal and commercial use. Its planned source release is under the Mozilla Public License 2.0, which permits commercial use subject to the license terms. The repository is private today, and there is no public download yet; links will be added here after publication.</p>
+      <dl>
+        <dt>Planned source license</dt>
+        <dd><a href="https://mozilla.org/MPL/2.0/" target="_blank" rel="noopener noreferrer">MPL-2.0</a></dd>
+        <dt>Public source repository</dt>
+        <dd>TBD - not published yet</dd>
+        <dt>Downloads</dt>
+        <dd>TBD - no public release yet</dd>
+      </dl>
+    </section>
+
+    <p class="natural-text-shortcuts-warning">Natural Text Shortcuts is not a password manager. Do not save passwords, recovery codes, API keys, or other secrets as triggers, and never use Natural Text Shortcuts for password submission. Protect exported JSON files because they contain readable text.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <div class="footer-branding">
+            <img class="natural-text-shortcuts-logo-icon" src="naturaltextshortcuts-icon-256.png" alt="">
+            Natural Text Shortcuts
+          </div>
+          <div class="footer-company">By <a href="index.html" style="color: var(--color-gray-light); text-decoration: underline;">Donkey Code Syndicate LLC</a></div>
+          <div class="footer-updated">Last updated: October 14, 2026</div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">
+            <span class="icon">🏠</span> Home
+          </a>
+          <a href="restfulsounds.html" class="footer-link">
+            <span class="icon">🎵</span> Restful Sounds
+          </a>
+          <a href="privacy-policy.html" class="footer-link">
+            <span class="icon">🔒</span> Privacy Policy
+          </a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Donkey Code Syndicate LLC. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

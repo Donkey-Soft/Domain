@@ -17,7 +17,7 @@
   5. PAGE-SPECIFIC STYLES
     5.1 Homepage
     5.2 Policy Pages
-    5.3 NudgeText Page
+    5.3 Natural Text Shortcuts Page
   6. UTILITIES
   7. PRINT STYLES
   8. MEDIA QUERIES
@@ -671,38 +671,31 @@ footer {
   line-height: var(--line-relaxed);
 }
 
-/* 5.3 NudgeText Page */
-.nudgetext-logo-icon {
+/* 5.3 Natural Text Shortcuts Page */
+.natural-text-shortcuts-logo-icon {
   width: 24px;
   height: 24px;
   margin-right: var(--space-2);
   object-fit: contain;
 }
 
-.nudgetext-mark {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-md);
-  background: var(--color-primary-100);
-  color: var(--color-primary-800);
-  font-size: var(--text-sm);
-  font-weight: var(--font-bold);
+.natural-text-shortcuts-link-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  object-fit: contain;
 }
 
-.nudgetext-card-icon {
+.natural-text-shortcuts-card-icon {
   width: 2.5rem;
   height: 2.5rem;
   object-fit: contain;
 }
 
-.nudgetext-hero {
+.natural-text-shortcuts-hero {
   padding-top: var(--space-7);
 }
 
-.nudgetext-title {
+.natural-text-shortcuts-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -710,17 +703,17 @@ footer {
   margin-bottom: var(--space-3);
 }
 
-.nudgetext-title h1 {
+.natural-text-shortcuts-title h1 {
   margin-bottom: 0;
 }
 
-.nudgetext-hero-icon {
+.natural-text-shortcuts-hero-icon {
   width: 3rem;
   height: 3rem;
   object-fit: contain;
 }
 
-.nudgetext-eyebrow {
+.natural-text-shortcuts-eyebrow {
   color: var(--theme-primary);
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
@@ -728,7 +721,7 @@ footer {
   text-transform: uppercase;
 }
 
-.nudgetext-facts {
+.natural-text-shortcuts-facts {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -736,7 +729,7 @@ footer {
   margin-top: var(--space-4);
 }
 
-.nudgetext-facts span {
+.natural-text-shortcuts-facts span {
   padding: var(--space-1) var(--space-3);
   border: 1px solid rgba(124, 58, 237, 0.22);
   border-radius: var(--radius-full);
@@ -745,22 +738,22 @@ footer {
   font-size: var(--text-sm);
 }
 
-.nudgetext-details {
+.natural-text-shortcuts-details {
   max-width: 900px;
   margin: 0 auto;
   padding: var(--space-5);
 }
 
-.nudgetext-details h2 {
+.natural-text-shortcuts-details h2 {
   margin-bottom: var(--space-2);
   font-size: var(--text-lg);
 }
 
-.nudgetext-details p + p {
+.natural-text-shortcuts-details p + p {
   margin-top: var(--space-3);
 }
 
-.nudgetext-release {
+.natural-text-shortcuts-release {
   max-width: 900px;
   margin: var(--space-5) auto 0;
   padding: var(--space-5);
@@ -770,33 +763,33 @@ footer {
   box-shadow: var(--shadow-md);
 }
 
-.nudgetext-release h2 {
+.natural-text-shortcuts-release h2 {
   margin-bottom: var(--space-2);
   font-size: var(--text-lg);
 }
 
-.nudgetext-release a {
+.natural-text-shortcuts-release a {
   color: var(--theme-primary);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-.nudgetext-release dl {
+.natural-text-shortcuts-release dl {
   display: grid;
   grid-template-columns: minmax(10rem, 1fr) 2fr;
   gap: var(--space-2) var(--space-4);
   margin-top: var(--space-4);
 }
 
-.nudgetext-release dt {
+.natural-text-shortcuts-release dt {
   font-weight: var(--font-semibold);
 }
 
-.nudgetext-release dd {
+.natural-text-shortcuts-release dd {
   color: var(--color-gray);
 }
 
-.nudgetext-warning {
+.natural-text-shortcuts-warning {
   max-width: 900px;
   margin: var(--space-4) auto 0;
   padding: 0 var(--space-4);
@@ -986,12 +979,25 @@ footer {
     gap: var(--space-3);
   }
 
-  .nudgetext-release dl {
+  .natural-text-shortcuts-title {
+    gap: var(--space-2);
+  }
+
+  .natural-text-shortcuts-title h1 {
+    font-size: clamp(1rem, 6vw, var(--text-3xl));
+  }
+
+  .natural-text-shortcuts-hero-icon {
+    width: clamp(1.75rem, 8vw, 3rem);
+    height: clamp(1.75rem, 8vw, 3rem);
+  }
+
+  .natural-text-shortcuts-release dl {
     grid-template-columns: 1fr;
     gap: var(--space-1);
   }
 
-  .nudgetext-release dd + dt {
+  .natural-text-shortcuts-release dd + dt {
     margin-top: var(--space-2);
   }
 }
@@ -1042,11 +1048,6 @@ footer {
     color: var(--color-light);
   }
 
-  .nudgetext-mark {
-    background: rgba(168, 85, 247, 0.2);
-    color: var(--color-primary-200);
-  }
-  
   header {
     background: rgba(26, 26, 46, 0.8);
   }

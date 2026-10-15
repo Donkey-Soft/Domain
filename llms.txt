@@ -42,11 +42,11 @@ A white noise and ambient sound app for sleep, focus, and relaxation.
 - Full policy: https://donkeycodesyndicate.com/privacy-policy-restful-sounds.html
 - Terms of Service: https://donkeycodesyndicate.com/terms-of-service.html
 
-### NudgeText (Windows desktop software)
+### Natural Text Shortcuts (Windows desktop software)
 
 A local-first Windows text expansion utility. Users create short triggers that expand into saved text while typing in desktop apps.
 
-- **Product page:** https://donkeycodesyndicate.com/nudgetext.html
+- **Product page:** https://donkeycodesyndicate.com/natural-text-shortcuts.html
 - **Platform:** Windows 10/11, x64 and ARM64 targets; runtime validation completed on x64 only
 - **Install model:** Portable, per-user executable; no installer or admin rights required for ordinary use
 - **Local data:** No network client or telemetry; settings and backup use Windows DPAPI CurrentUser protection tied to the user profile; profile loss can make them unrecoverable; exports are readable JSON; DPAPI does not protect against the signed-in user, same-user malware, or memory inspection
